@@ -47,13 +47,13 @@ char showTheList(char* path){
 
 void serviceConnection(int socket) //ServeConnection
 {
-    char path_to_file[512]; //path (for a file)
+    char path_to_file[512];
     unsigned long file_size, sended, all_sended, readen;
     struct stat fileinfo;
-    FILE* file; //file
-    unsigned char bufor[4000000]; //buffer
+    FILE* file;
+    unsigned char bufor[4000000];
     
-    memset(path_to_file, 0, 512); //path
+    memset(path_to_file, 0, 512);
     if (recv(socket, path_to_file, 512, 0) <= 0)
     {
         printf("Potomny: blad przy odczycie sciezki\nChild (process): error while reading a path\n");
