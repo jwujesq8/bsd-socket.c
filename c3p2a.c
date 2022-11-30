@@ -45,7 +45,7 @@ char showTheList(char* path){
 }
 
 
-void serviceConnection(int socket) //ServeConnection
+void serviceConnection(int socket)
 {
     char path_to_file[512];
     unsigned long file_size, sended, all_sended, readen;
